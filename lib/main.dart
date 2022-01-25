@@ -1,33 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:project3/screens/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyTodoApp(),
-    );
-  }
-}
-
-class MyTodoApp extends StatefulWidget {
-  const MyTodoApp({ Key? key }) : super(key: key);
-
-  @override
-  _MyTodoAppState createState() => _MyTodoAppState();
-}
-
-class _MyTodoAppState extends State<MyTodoApp> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      
+      title: "BMI Calculator",
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.yellow,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+      ),
+      home: HomeScreen(),
     );
   }
 }
